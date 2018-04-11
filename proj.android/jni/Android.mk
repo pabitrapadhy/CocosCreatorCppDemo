@@ -22,6 +22,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 
 
 LOCAL_STATIC_LIBRARIES := cocos2dx_static
+LOCAL_STATIC_LIBRARIES += creator_reader
 
 # _COCOS_LIB_ANDROID_BEGIN
 # _COCOS_LIB_ANDROID_END
@@ -29,6 +30,7 @@ LOCAL_STATIC_LIBRARIES := cocos2dx_static
 include $(BUILD_SHARED_LIBRARY)
 
 $(call import-module,.)
+$(call import-module,./../../Classes/reader)
 
 # _COCOS_LIB_IMPORT_ANDROID_BEGIN
 # _COCOS_LIB_IMPORT_ANDROID_END
