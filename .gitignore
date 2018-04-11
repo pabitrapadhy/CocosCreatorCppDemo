@@ -76,6 +76,7 @@ _ReSharper*/
 ipch/
 *.opensdf
 *.xcuserstate
+*.xcworkspace
 xcuserdata/
 Thumbs.db
 
