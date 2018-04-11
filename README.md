@@ -5,6 +5,12 @@
 * cocos2d-x: v3.14+
 * Cocos Creator: v1.4+
 
+## Additional Information (Must See)
+* While building the project, I have directly copied the plugin `creator_luacpp_support` into the `proj.creator/packages` directory.
+* After adding adding all the header search paths as mentioned below, I've dragged the generated `creator` directory as a reference inside `Resources` folder in Xcode project and the `reader` directory as groups into the `Classes` directory of Xcode project.
+#### NOTE: I have checked both the mobile and mac development as link, while adding these folders.
+* Finally, when everything was about to seem right to build, I faced an Undefined symbol for architecture issue with `MPMoviePlayerController` and some others. But, after adding `GameController.framework` and `MediaPlayer.framework` to your project, it worked fine and ran.
+
 ## Limitations
 
 Given that Creator uses a component based model to create its objects, and
