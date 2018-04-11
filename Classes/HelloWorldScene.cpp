@@ -1,11 +1,23 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 
+// cocos creator reader header file
+#include "reader/CreatorReader.h"
+
 USING_NS_CC;
+using namespace creator;
 
 Scene* HelloWorld::createScene()
 {
-    return HelloWorld::create();
+    // cocos creator scene creation
+    CreatorReader* reader = CreatorReader::createWithFilename("creator/Scene/helloworld.ccreator");
+    reader->setup();
+    
+    Scene* scene = reader->getSceneGraph();
+    return scene;
+    
+    // cocos2d-x scene creation
+    // return HelloWorld::create();
 }
 
 // Print useful error message instead of segfaulting when files are not there.
