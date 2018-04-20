@@ -7,7 +7,7 @@
 					"w": 0,
 					"h": 0
 				},
-				"name": "",
+				"enabled": true,
 				"anchorPoint": {
 					"x": 0,
 					"y": 0
@@ -23,6 +23,7 @@
 				"opacity": 255,
 				"opacityModifyRGB": false,
 				"tag": -1,
+				"groupIndex": 0,
 				"colliders": []
 			}
 		},
@@ -61,6 +62,7 @@
 					"skewX": 0,
 					"skewY": 0,
 					"tag": -1,
+					"groupIndex": 0,
 					"colliders": []
 				},
 				"object_type": "Node",
@@ -99,10 +101,15 @@
 								"skewX": 0,
 								"skewY": 0,
 								"tag": -1,
+								"groupIndex": 0,
 								"colliders": []
 							},
 							"spriteFrameName": "Texture/singleColor.png",
-							"spriteType": "Sliced"
+							"spriteType": "Sliced",
+							"srcBlend": 770,
+							"dstBlend": 771,
+							"trimEnabled": true,
+							"sizeMode": "Custom"
 						},
 						"object_type": "Sprite",
 						"children": []
@@ -131,7 +138,7 @@
 								"opacity": 255,
 								"opacityModifyRGB": false,
 								"position": {
-									"x": 0,
+									"x": 274,
 									"y": 50
 								},
 								"rotationSkewX": 0,
@@ -141,10 +148,15 @@
 								"skewX": 0,
 								"skewY": 0,
 								"tag": -1,
+								"groupIndex": 0,
 								"colliders": []
 							},
 							"spriteFrameName": "Texture/HelloWorld.png",
-							"spriteType": "Simple"
+							"spriteType": "Simple",
+							"srcBlend": 770,
+							"dstBlend": 771,
+							"trimEnabled": true,
+							"sizeMode": "Trimmed"
 						},
 						"object_type": "Sprite",
 						"children": []
@@ -153,8 +165,8 @@
 						"object": {
 							"node": {
 								"contentSize": {
-									"w": 492,
-									"h": 112
+									"w": 147,
+									"h": 60
 								},
 								"enabled": true,
 								"name": "label",
@@ -183,6 +195,7 @@
 								"skewX": 0,
 								"skewY": 0,
 								"tag": -1,
+								"groupIndex": 0,
 								"colliders": []
 							},
 							"fontSize": 60,

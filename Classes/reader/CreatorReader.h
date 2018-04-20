@@ -81,7 +81,7 @@ protected:
 
     cocos2d::Node* createTree(const buffers::NodeTree* treeBuffer) const;
 
-    cocos2d::Scene* createScene(const buffers::Scene* sceneBuffer) const;
+    virtual cocos2d::Scene* createScene(const buffers::Scene* sceneBuffer) const;
     void parseScene(cocos2d::Scene* scene, const buffers::Scene* sceneBuffer) const;
 
     cocos2d::Node* createNode(const buffers::Node* nodeBuffer) const;

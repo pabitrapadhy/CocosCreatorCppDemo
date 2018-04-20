@@ -94,7 +94,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    HelloWorld* scene = HelloWorld::createFromCCreator();
+    scene->testUI();
 
     // run
     director->runWithScene(scene);

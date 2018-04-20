@@ -1,20 +1,30 @@
-#ifndef __HELLOWORLD_SCENE_H__
-#define __HELLOWORLD_SCENE_H__
-
+#pragma once
 #include "cocos2d.h"
+#include "CreatorReader.h"
+#include "CocosCustomMacros.h"
 
-class HelloWorld : public cocos2d::Scene
-{
+using namespace cocos2d;
+using namespace creator;
+using namespace ui;
+
+class HelloWorld : public cocos2d::Scene {
 public:
-    static cocos2d::Scene* createScene();
-
-    virtual bool init();
+    DECLARE_TOUCH_CALLBACK;
     
-    // a selector callback
-    void menuCloseCallback(cocos2d::Ref* pSender);
+    // member variables
+    DECLARE_COCOS_UI(cocos2d::Node, backgroundLayer);
+    DECLARE_COCOS_UI(cocos2d::ui::Button, quitBtn);
+    DECLARE_COCOS_UI(cocos2d::Label, quitLabel);
     
-    // implement the "static create()" method manually
+    // member functions
+    HelloWorld();
+	static HelloWorld* createFromCCreator();
+	virtual bool init() override;
+    
+    void testUI();
+    void actOnTouch(Ref* sender, Widget::TouchEventType type);
+    
     CREATE_FUNC(HelloWorld);
 };
 
-#endif // __HELLOWORLD_SCENE_H__
+DECLARE_CREATOR_READER_FOR_CLASS(HelloWorld, HelloWorldReader);

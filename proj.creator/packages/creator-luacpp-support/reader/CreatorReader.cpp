@@ -386,18 +386,19 @@ cocos2d::Node* CreatorReader::createTree(const buffers::NodeTree* tree) const
         cocos2d::Node* child = createTree(childBuffer);
         if (child && node)
         {
+            // pabitra:
             // should adjust child's position except Button's label
-            if (parsing_button && dynamic_cast<cocos2d::Label*>(child) != nullptr)
-            {
-                auto button = static_cast<cocos2d::ui::Button*>(node);
-                auto label = static_cast<cocos2d::Label*>(child);
-                button->setTitleLabel(label);
-            }
-            else
-            {
+            // if (parsing_button && dynamic_cast<cocos2d::Label*>(child) != nullptr)
+            // {
+            //     auto button = static_cast<cocos2d::ui::Button*>(node);
+            //     auto label = static_cast<cocos2d::Label*>(child);
+            //     button->setTitleLabel(label);
+            // }
+            // else
+            // {
                 node->addChild(child);
                 adjustPosition(child);
-            }
+            // }
         }
     }
 
