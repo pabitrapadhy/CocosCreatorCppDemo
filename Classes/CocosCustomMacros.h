@@ -74,7 +74,7 @@ __classreadername__* __classreadername__::createWithFilename(const std::string& 
 } \
 \
 __classname__* __classreadername__::createScene(const creator::buffers::Scene* sceneBuffer) const { \
-    __classname__* scene = HelloWorld::create(); \
+    __classname__* scene = __classname__::create(); \
     return scene; \
 } \
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
