@@ -10,6 +10,7 @@
 * After adding adding all the header search paths as mentioned below, I've dragged the generated `creator` directory as a reference inside `Resources` folder in Xcode project and the `reader` directory as groups into the `Classes` directory of Xcode project.
 #### NOTE: I have checked both the mobile and mac development as link, while adding these folders.
 * Finally, when everything was about to seem right to build, I faced an Undefined symbol for architecture issue with `MPMoviePlayerController` and some others. But, after adding `GameController.framework` and `MediaPlayer.framework` to your project, it worked fine and ran.
+* CreatorReader.h/.cpp is modified slightly. Made the createScene() virtual and Commented a piece of code in the .cpp file, where the Label was not added as child to the button. Find by searching "pabitra". Note that these changes were required to be done in two places, else on next export from creator, all changes in the classes/reader directory would be overridden.
 
 ## Limitations
 
