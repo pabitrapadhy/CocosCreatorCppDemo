@@ -35,8 +35,6 @@
 #include "dragonbones/DragonBonesHeaders.h"
 #include "dragonbones/cocos2dx/CCDragonBonesHeaders.h"
 
-
-
 NS_CCR_BEGIN
 
 class CreatorReader: public cocos2d::Ref
@@ -49,6 +47,54 @@ public:
      @return A `Scene*`
      */
     cocos2d::Scene* getSceneGraph() const;
+
+    /**
+     Returns the nodegraph contained in the .ccreator file for a particular node
+     @return A `T*`
+     */
+    template <class T>
+    cocos2d::Node* getNodeGraph(T* ref, const std::string& nodename) const {
+        // NOTE:
+        // Keep in mind that a layer is most of the required cross-scenes.
+        //
+        // Since, Cocos Creator packs everything in a .ccreator file, with Scene as the root node
+        // creating custom class objects for layers is not possible directly, like cocos reader
+        // where layers can be saved as a separate .csb file.
+        // So, we have to pass the node name of the file, that the custom class needs to be attached.
+        // Also, make the node standalone, remove it from it's parent.
+
+        const void* buffer = _data.getBytes();
+
+        auto sceneGraph = buffers::GetSceneGraph(buffer);
+        auto nodeTree = sceneGraph->root();
+        CCLOG("NodeTree: %p", nodeTree);
+
+        cocos2d::Node* node = createTree(nodeTree);
+        ref = T::create(); // CustomLayer object
+
+        // pabitra: recursively iterate through it's children to find the node with the name
+        if (node) {
+            auto searchNode = node->getChildByName(nodename);
+            CC_ASSERT(searchNode);
+            CC_ASSERT(ref);
+
+            if (searchNode && ref) {
+                searchNode->removeFromParentAndCleanup(true);
+                ref = static_cast<T*>(searchNode);
+                // TODO: after reading logic to create classname, make the above a dynamic_cast
+                // so that it would work for individual node loading as well.
+            }
+        }
+
+        _animationManager->playOnLoad();
+
+        ref->addChild(_collisionManager);
+        ref->addChild(_animationManager);
+
+        _collisionManager->start();
+
+        return ref;
+    }
     
     /**
      Return the AnimationManager. It is added as a child of the Scene to simplify the codes.
@@ -73,6 +119,8 @@ public:
      Call it before getting the Scene graph
      */
     void setup();
+
+    bool inspectForCustomClassFormat(std::string nodename) const;
 
 protected:
     CreatorReader();

@@ -7,7 +7,8 @@ using namespace cocos2d;
 using namespace creator;
 using namespace ui;
 
-class HelloWorld : public cocos2d::Scene {
+class CustomLayer;
+class CustomScene : public cocos2d::Scene {
 public:
     DECLARE_TOUCH_CALLBACK;
     
@@ -15,16 +16,24 @@ public:
     DECLARE_COCOS_UI(cocos2d::Node, backgroundLayer);
     DECLARE_COCOS_UI(cocos2d::ui::Button, quitBtn);
     DECLARE_COCOS_UI(cocos2d::Label, quitLabel);
+    DECLARE_COCOS_UI(CustomLayer, topLayer);
     
     // member functions
-    HelloWorld();
-	static HelloWorld* createFromCCreator();
+    CustomScene();
+	static CustomScene* createFromCCreator();
 	virtual bool init() override;
     
     void testUI();
     void actOnTouch(Ref* sender, Widget::TouchEventType type);
+
+    // touch events
+    bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event);
+    void onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event);
+    void onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
     
-    CREATE_FUNC(HelloWorld);
+    void test();
+    
+    CREATE_FUNC(CustomScene);
 };
 
-DECLARE_CREATOR_READER_FOR_CLASS(HelloWorld, HelloWorldReader);
+DECLARE_CREATOR_READER_FOR_SCENE_CLASS(CustomScene, CustomSceneReader);

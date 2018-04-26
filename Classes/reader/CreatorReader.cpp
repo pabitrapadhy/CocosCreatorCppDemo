@@ -28,6 +28,7 @@
 #include "ui/RichtextStringVisitor.h"
 #include "ui/PageView.h"
 #include "collider/Collider.h"
+#include "CocosObjectFactory.h"
 
 #include <vector>
 #include <cmath>
@@ -41,6 +42,8 @@ USING_NS_CCR;
 
 static void setSpriteQuad(V3F_C4B_T2F_Quad* quad, const cocos2d::Size& origSize, const int x, const int y, float x_factor, float y_factor);
 static void tileSprite(cocos2d::Sprite* sprite);
+static ValueVector splitStringByDelimeter(std::string nodename, char delim);
+static std::string toLowerCase(std::string stringToConvert);
 
 namespace {
     template <typename T, typename U>
@@ -423,9 +426,23 @@ void CreatorReader::parseScene(cocos2d::Scene* scene, const buffers::Scene* scen
 
 cocos2d::Node* CreatorReader::createNode(const buffers::Node* nodeBuffer) const
 {
-    cocos2d::Node* node = cocos2d::Node::create();
-    if (node)
-        parseNode(node, nodeBuffer);
+    const auto& name = nodeBuffer->name();
+    std::string nodename = name->c_str();
+
+    const ValueVector& splits = splitStringByDelimeter(nodename, '_');
+    std::string typeStr = toLowerCase(splits.at(0).asString());
+    
+    cocos2d::Node* node = nullptr;
+    if (inspectForCustomClassFormat(typeStr) && splits.size() > 1) {
+        // getting the specific factory by passing string and creating object from it.
+        std::string classname = splits.at(1).asString();
+        FACTORY_MAP factoryMap = CocosObject::getFactoryMap();
+        CocosObjectFactory* factory = static_cast<CocosObjectFactory*>(factoryMap[classname]);
+        node = reinterpret_cast<cocos2d::Node*>(factory->createFactoryNode());    
+    } else {
+        node = cocos2d::Node::create();
+    }
+    if (node) parseNode(node, nodeBuffer);
     return node;
 }
 
@@ -1455,6 +1472,15 @@ void CreatorReader::adjustPosition(cocos2d::Node* node) const
     }
 }
 
+bool CreatorReader::inspectForCustomClassFormat(std::string nodename) const {
+    // split the nodename by delimeter (_) underscore, then check the first part as layer
+    const ValueVector& splits = splitStringByDelimeter(nodename, '_');
+    if ((splits.size() > 0) && toLowerCase(splits.at(0).asString()) == "layer") {
+        return true;
+    }
+    return false;
+}
+
 //
 // Helper free functions
 //
@@ -1537,4 +1563,21 @@ static void tileSprite(cocos2d::Sprite* sprite)
     // FIXME: setPolygonInfo will create new arrays and copy the recently alloced one
     // there should be a way to pass ownership so that it is not needed to copy them
     sprite->setPolygonInfo(poly);
+}
+
+ValueVector splitStringByDelimeter(std::string str, char delim) {
+    ValueVector res = ValueVectorNull;
+    std::ostringstream stream;
+    std::istringstream f(str);
+    std::string s;
+
+    while (getline(f, s, delim)) {
+        res.push_back(cocos2d::Value(s));
+    }
+    return res;
+}
+
+std::string toLowerCase(std::string stringToConvert){
+    std::transform(stringToConvert.begin(), stringToConvert.end(), stringToConvert.begin(), ::tolower); 
+    return stringToConvert;
 }
