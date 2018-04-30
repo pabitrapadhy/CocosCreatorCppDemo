@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "CustomScene.h"
+#include "CustomLayer.h"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -99,6 +100,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // run
     director->runWithScene(scene);
+    
+    // EXPERIMENTAL:
+//    Scene* myScene = Scene::create();
+//    CustomLayer* myLayer = CustomLayer::createFromCCreator();
+//    myScene->addChild(myLayer);
+//    director->runWithScene(myScene);
+//    myLayer->test();
 
     return true;
 }

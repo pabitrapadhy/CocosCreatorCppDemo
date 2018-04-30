@@ -1,6 +1,5 @@
 #pragma once
 #include "CocosView.h"
-#include "reader/CocosObjectFactory.h"
 
 DECLARE_COCOS_CUSTOM_VIEW(CustomLayer) {
 protected:
@@ -10,9 +9,14 @@ protected:
     DECLARE_CUSTOM_VIEW_LIFECYCLE_ONPREDETTACH
 
 public:
+    DECLARE_TOUCH_CALLBACK;
+
     int value;
     CustomLayer();
     static CustomLayer* createFromCCreator();
+    void test();
+
+    DECLARE_COCOS_UI(cocos2d::ui::Button, secondBtn);
 
     CREATE_FUNC(CustomLayer);
 };

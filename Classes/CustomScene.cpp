@@ -23,14 +23,6 @@ bool CustomScene::init() {
     }
     // NOTE: if you want to set something pre-initialization of the scene UI.
     // such as Event Listeners and Message Handlers.
-
-    auto touchListener = EventListenerTouchOneByOne::create();
-    touchListener->onTouchBegan = CC_CALLBACK_2(CustomScene::onTouchBegan, this);
-    touchListener->onTouchMoved = CC_CALLBACK_2(CustomScene::onTouchMoved, this);
-    touchListener->onTouchEnded = CC_CALLBACK_2(CustomScene::onTouchEnded, this);
-
-    auto eventDispatcher = Director::getInstance()->getEventDispatcher();
-    eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
     
     return true;
 }
@@ -58,22 +50,9 @@ void CustomScene::onTouch(cocos2d::Ref* sender, Widget::TouchEventType type) {
     }
 }
 
-bool CustomScene::onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) {
-    CCLOG("TOUCH BEGAN");
-    return true;
-}
-
-void CustomScene::onTouchMoved(cocos2d::Touch* touch, cocos2d::Event* event) {
-    CCLOG("TOUCH MOVED");
-}
-
-void CustomScene::onTouchEnded(cocos2d::Touch* touch, cocos2d::Event* event) {
-    CCLOG("TOUCH ENDED");
-}
-
-#include "CustomLayer.h"
 void CustomScene::test() {
     if (topLayer) {
         CCLOG("Custom Layer class found.");
+        topLayer->test();
     }
 }

@@ -53,7 +53,7 @@ public:
      @return A `T*`
      */
     template <class T>
-    cocos2d::Node* getNodeGraph(T* ref, const std::string& nodename) const {
+    cocos2d::Node* getNodeGraph(const std::string& nodename) const {
         // NOTE:
         // Keep in mind that a layer is most of the required cross-scenes.
         //
@@ -69,31 +69,28 @@ public:
         auto nodeTree = sceneGraph->root();
         CCLOG("NodeTree: %p", nodeTree);
 
+        cocos2d::Node* searchNode = nullptr;
         cocos2d::Node* node = createTree(nodeTree);
-        ref = T::create(); // CustomLayer object
 
         // pabitra: recursively iterate through it's children to find the node with the name
         if (node) {
-            auto searchNode = node->getChildByName(nodename);
+            searchNode = node->getChildByName(nodename);
             CC_ASSERT(searchNode);
-            CC_ASSERT(ref);
 
-            if (searchNode && ref) {
+            if (searchNode) {
                 searchNode->removeFromParentAndCleanup(true);
-                ref = static_cast<T*>(searchNode);
-                // TODO: after reading logic to create classname, make the above a dynamic_cast
-                // so that it would work for individual node loading as well.
+                CC_ASSERT(dynamic_cast<T*>(searchNode)); // NOTE: shouldn't hit this assert, expect a clean cast.
             }
         }
 
         _animationManager->playOnLoad();
 
-        ref->addChild(_collisionManager);
-        ref->addChild(_animationManager);
+        searchNode->addChild(_collisionManager);
+        searchNode->addChild(_animationManager);
 
         _collisionManager->start();
 
-        return ref;
+        return searchNode;
     }
     
     /**

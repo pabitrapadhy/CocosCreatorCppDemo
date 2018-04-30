@@ -140,7 +140,7 @@
 						"opacityModifyRGB": false,
 						"position": {
 							"x": 480,
-							"y": 100
+							"y": 166
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -235,7 +235,7 @@
 					"opacityModifyRGB": false,
 					"position": {
 						"x": 480,
-						"y": 320
+						"y": 464
 					},
 					"rotationSkewX": 0,
 					"rotationSkewY": 0,
@@ -248,7 +248,149 @@
 					"colliders": []
 				},
 				"object_type": "Node",
-				"children": []
+				"children": [
+					{
+						"object": {
+							"node": {
+								"contentSize": {
+									"w": 140,
+									"h": 50
+								},
+								"enabled": true,
+								"name": "SecondButton",
+								"anchorPoint": {
+									"x": 0.5,
+									"y": 0.5
+								},
+								"cascadeOpacityEnabled": true,
+								"color": {
+									"r": 255,
+									"g": 255,
+									"b": 255
+								},
+								"globalZOrder": 0,
+								"localZOrder": 0,
+								"opacity": 255,
+								"opacityModifyRGB": false,
+								"position": {
+									"x": 0,
+									"y": 18
+								},
+								"rotationSkewX": 0,
+								"rotationSkewY": 0,
+								"scaleX": 1,
+								"scaleY": 1,
+								"skewX": 0,
+								"skewY": 0,
+								"tag": -1,
+								"groupIndex": 0,
+								"colliders": []
+							},
+							"ignoreContentAdaptWithSize": false,
+							"spriteFrameName": "Common/Button_GreenSmall.png",
+							"transition": 2,
+							"pressedSpriteFrameName": "Common/Button_GreySmall.png"
+						},
+						"object_type": "Button",
+						"children": [
+							{
+								"object": {
+									"node": {
+										"contentSize": {
+											"w": 60,
+											"h": 20
+										},
+										"enabled": true,
+										"name": "SecondLabel",
+										"anchorPoint": {
+											"x": 0.5,
+											"y": 0.5
+										},
+										"cascadeOpacityEnabled": true,
+										"color": {
+											"r": 0,
+											"g": 0,
+											"b": 0
+										},
+										"globalZOrder": 0,
+										"localZOrder": 0,
+										"opacity": 255,
+										"opacityModifyRGB": false,
+										"position": {
+											"x": 0,
+											"y": 0
+										},
+										"rotationSkewX": 0,
+										"rotationSkewY": 0,
+										"scaleX": 1,
+										"scaleY": 1,
+										"skewX": 0,
+										"skewY": 0,
+										"tag": -1,
+										"groupIndex": 0,
+										"colliders": []
+									},
+									"fontSize": 20,
+									"labelText": "SECOND",
+									"horizontalAlignment": "Center",
+									"verticalAlignment": "Center",
+									"overflowType": "None",
+									"enableWrap": true,
+									"fontName": "creator/5fd4c05a-b83f-4d52-9f46-0ac57c930515/Marker Felt.ttf",
+									"fontType": "TTF",
+									"lineHeight": 20
+								},
+								"object_type": "Label",
+								"children": []
+							},
+							{
+								"object": {
+									"node": {
+										"contentSize": {
+											"w": 140,
+											"h": 50
+										},
+										"enabled": true,
+										"name": "ThirdButton",
+										"anchorPoint": {
+											"x": 0.5,
+											"y": 0.5
+										},
+										"cascadeOpacityEnabled": true,
+										"color": {
+											"r": 255,
+											"g": 255,
+											"b": 255
+										},
+										"globalZOrder": 0,
+										"localZOrder": 0,
+										"opacity": 255,
+										"opacityModifyRGB": false,
+										"position": {
+											"x": 286,
+											"y": -156
+										},
+										"rotationSkewX": 0,
+										"rotationSkewY": 0,
+										"scaleX": 1,
+										"scaleY": 1,
+										"skewX": 0,
+										"skewY": 0,
+										"tag": -1,
+										"groupIndex": 0,
+										"colliders": []
+									},
+									"ignoreContentAdaptWithSize": false,
+									"spriteFrameName": "Common/Button_GreenSmall.png",
+									"transition": 2,
+									"pressedSpriteFrameName": "Common/Button_GreySmall.png"
+								},
+								"object_type": "Button",
+								"children": []
+							}
+						]
+					}
+				]
 			}
 		]
 	},
