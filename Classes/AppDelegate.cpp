@@ -94,17 +94,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
-    // ACTUAL:
-//    CustomScene* scene = CustomScene::createFromCCreator();
-//    scene->testUI();
-//    director->runWithScene(scene);
-    
-    // EXPERIMENTAL:
-    Scene* myScene = Scene::create();
-    CustomLayer* myLayer = CustomLayer::createFromCCreator();
-    myLayer->test();
-    myScene->addChild(myLayer);
-    director->runWithScene(myScene);
+    CustomScene* scene = CustomScene::createFromCCreator();
+    scene->testUI();
+    director->runWithScene(scene);
     
     return true;
 }

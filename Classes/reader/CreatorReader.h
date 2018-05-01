@@ -72,13 +72,15 @@ public:
         cocos2d::Node* searchNode = nullptr;
         cocos2d::Node* node = createTree(nodeTree);
 
-        // pabitra: recursively iterate through it's children to find the node with the name
+        // pabitra: change in cocos2d-x, recursively iterates through the children 
+        // to find the node with the name from the root node.
         if (node) {
             searchNode = node->getChildByName(nodename);
             CC_ASSERT(searchNode);
-
             if (searchNode) {
-                searchNode->removeFromParentAndCleanup(true);
+                // NOTE: cleanup shouldn't remove the attached listeners and event dispatchers
+                // so it should always be removeFromParentAndCleanup(false);
+                searchNode->removeFromParentAndCleanup(false);
                 CC_ASSERT(dynamic_cast<T*>(searchNode)); // NOTE: shouldn't hit this assert, expect a clean cast.
             }
         }

@@ -123,7 +123,7 @@
 							"h": 50
 						},
 						"enabled": true,
-						"name": "QuitButton",
+						"name": "ChangeSceneButton",
 						"anchorPoint": {
 							"x": 0.5,
 							"y": 0.5
@@ -163,11 +163,11 @@
 						"object": {
 							"node": {
 								"contentSize": {
-									"w": 37,
+									"w": 114,
 									"h": 20
 								},
 								"enabled": true,
-								"name": "QuitLabel",
+								"name": "ChangeSceneLabel",
 								"anchorPoint": {
 									"x": 0.5,
 									"y": 0.5
@@ -197,7 +197,7 @@
 								"colliders": []
 							},
 							"fontSize": 20,
-							"labelText": "QUIT",
+							"labelText": "CHANGE SCENE",
 							"horizontalAlignment": "Center",
 							"verticalAlignment": "Center",
 							"overflowType": "None",
@@ -341,51 +341,6 @@
 									"lineHeight": 20
 								},
 								"object_type": "Label",
-								"children": []
-							},
-							{
-								"object": {
-									"node": {
-										"contentSize": {
-											"w": 140,
-											"h": 50
-										},
-										"enabled": true,
-										"name": "ThirdButton",
-										"anchorPoint": {
-											"x": 0.5,
-											"y": 0.5
-										},
-										"cascadeOpacityEnabled": true,
-										"color": {
-											"r": 255,
-											"g": 255,
-											"b": 255
-										},
-										"globalZOrder": 0,
-										"localZOrder": 0,
-										"opacity": 255,
-										"opacityModifyRGB": false,
-										"position": {
-											"x": 286,
-											"y": -156
-										},
-										"rotationSkewX": 0,
-										"rotationSkewY": 0,
-										"scaleX": 1,
-										"scaleY": 1,
-										"skewX": 0,
-										"skewY": 0,
-										"tag": -1,
-										"groupIndex": 0,
-										"colliders": []
-									},
-									"ignoreContentAdaptWithSize": false,
-									"spriteFrameName": "Common/Button_GreenSmall.png",
-									"transition": 2,
-									"pressedSpriteFrameName": "Common/Button_GreySmall.png"
-								},
-								"object_type": "Button",
 								"children": []
 							}
 						]

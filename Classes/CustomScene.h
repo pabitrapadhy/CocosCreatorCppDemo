@@ -14,8 +14,8 @@ public:
 
     // member variables
     DECLARE_COCOS_UI(cocos2d::Node, backgroundLayer);
-    DECLARE_COCOS_UI(cocos2d::ui::Button, quitBtn);
-    DECLARE_COCOS_UI(cocos2d::Label, quitLabel);
+    DECLARE_COCOS_UI(cocos2d::ui::Button, changeSceneBtn);
+    DECLARE_COCOS_UI(cocos2d::Label, changeSceneLabel);
     DECLARE_COCOS_UI(CustomLayer, topLayer);
     
     // member functions
@@ -23,7 +23,8 @@ public:
 	static CustomScene* createFromCCreator();
 	virtual bool init() override;
     
-    void testUI();    
+    void testUI();
+    void createStandaloneNode();
     void test();
     
     CREATE_FUNC(CustomScene);
