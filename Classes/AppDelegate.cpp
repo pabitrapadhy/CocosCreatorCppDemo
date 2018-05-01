@@ -19,7 +19,7 @@ using namespace CocosDenshion;
 
 USING_NS_CC;
 
-static cocos2d::Size designResolutionSize = cocos2d::Size(480, 320);
+static cocos2d::Size designResolutionSize = cocos2d::Size(960, 640);
 static cocos2d::Size smallResolutionSize = cocos2d::Size(480, 320);
 static cocos2d::Size mediumResolutionSize = cocos2d::Size(1024, 768);
 static cocos2d::Size largeResolutionSize = cocos2d::Size(2048, 1536);
@@ -94,20 +94,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
-    // create a scene. it's an autorelease object
-    CustomScene* scene = CustomScene::createFromCCreator();
-    scene->testUI();
-
-    // run
-    director->runWithScene(scene);
+    // ACTUAL:
+//    CustomScene* scene = CustomScene::createFromCCreator();
+//    scene->testUI();
+//    director->runWithScene(scene);
     
     // EXPERIMENTAL:
-//    Scene* myScene = Scene::create();
-//    CustomLayer* myLayer = CustomLayer::createFromCCreator();
-//    myScene->addChild(myLayer);
-//    director->runWithScene(myScene);
-//    myLayer->test();
-
+    Scene* myScene = Scene::create();
+    CustomLayer* myLayer = CustomLayer::createFromCCreator();
+    myLayer->test();
+    myScene->addChild(myLayer);
+    director->runWithScene(myScene);
+    
     return true;
 }
 
