@@ -83,9 +83,9 @@
 						},
 						"cascadeOpacityEnabled": true,
 						"color": {
-							"r": 70,
-							"g": 98,
-							"b": 158
+							"r": 34,
+							"g": 29,
+							"b": 29
 						},
 						"globalZOrder": 0,
 						"localZOrder": 0,
@@ -119,11 +119,11 @@
 				"object": {
 					"node": {
 						"contentSize": {
-							"w": 140,
-							"h": 50
+							"w": 195,
+							"h": 270
 						},
 						"enabled": true,
-						"name": "ChangeSceneButton",
+						"name": "HelloWorldSprite",
 						"anchorPoint": {
 							"x": 0.5,
 							"y": 0.5
@@ -140,7 +140,239 @@
 						"opacityModifyRGB": false,
 						"position": {
 							"x": 480,
-							"y": 166
+							"y": 320
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"scaleX": 1,
+						"scaleY": 1,
+						"skewX": 0,
+						"skewY": 0,
+						"tag": -1,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"spriteFrameName": "Texture/HelloWorld.png",
+					"spriteType": "Simple",
+					"srcBlend": 770,
+					"dstBlend": 771,
+					"trimEnabled": true,
+					"sizeMode": "Trimmed"
+				},
+				"object_type": "Sprite",
+				"children": []
+			},
+			{
+				"object": {
+					"contentSize": {
+						"w": 0,
+						"h": 0
+					},
+					"enabled": true,
+					"name": "Layer_CustomLayer_RootLayer",
+					"anchorPoint": {
+						"x": 0.5,
+						"y": 0.5
+					},
+					"cascadeOpacityEnabled": true,
+					"color": {
+						"r": 255,
+						"g": 255,
+						"b": 255
+					},
+					"globalZOrder": 0,
+					"localZOrder": 0,
+					"opacity": 255,
+					"opacityModifyRGB": false,
+					"position": {
+						"x": 100,
+						"y": 320
+					},
+					"rotationSkewX": 0,
+					"rotationSkewY": 0,
+					"scaleX": 1,
+					"scaleY": 1,
+					"skewX": 0,
+					"skewY": 0,
+					"tag": -1,
+					"groupIndex": 0,
+					"colliders": []
+				},
+				"object_type": "Node",
+				"children": [
+					{
+						"object": {
+							"node": {
+								"contentSize": {
+									"w": 278,
+									"h": 22
+								},
+								"enabled": true,
+								"name": "LayerInfoLabel",
+								"anchorPoint": {
+									"x": 0.5,
+									"y": 0.5
+								},
+								"cascadeOpacityEnabled": true,
+								"color": {
+									"r": 255,
+									"g": 255,
+									"b": 255
+								},
+								"globalZOrder": 0,
+								"localZOrder": 0,
+								"opacity": 255,
+								"opacityModifyRGB": false,
+								"position": {
+									"x": 75,
+									"y": 104
+								},
+								"rotationSkewX": 0,
+								"rotationSkewY": 0,
+								"scaleX": 1,
+								"scaleY": 1,
+								"skewX": 0,
+								"skewY": 0,
+								"tag": -1,
+								"groupIndex": 0,
+								"colliders": []
+							},
+							"fontSize": 22,
+							"labelText": "CustomLayer Created With Scene",
+							"horizontalAlignment": "Center",
+							"verticalAlignment": "Center",
+							"overflowType": "None",
+							"enableWrap": true,
+							"fontName": "creator/5fd4c05a-b83f-4d52-9f46-0ac57c930515/Marker Felt.ttf",
+							"fontType": "TTF",
+							"lineHeight": 22
+						},
+						"object_type": "Label",
+						"children": []
+					},
+					{
+						"object": {
+							"node": {
+								"contentSize": {
+									"w": 150,
+									"h": 150
+								},
+								"enabled": true,
+								"name": "BackgroundImg",
+								"anchorPoint": {
+									"x": 0.5,
+									"y": 0.5
+								},
+								"cascadeOpacityEnabled": true,
+								"color": {
+									"r": 174,
+									"g": 241,
+									"b": 209
+								},
+								"globalZOrder": 0,
+								"localZOrder": 0,
+								"opacity": 255,
+								"opacityModifyRGB": false,
+								"position": {
+									"x": 75,
+									"y": 0
+								},
+								"rotationSkewX": 0,
+								"rotationSkewY": 0,
+								"scaleX": 1,
+								"scaleY": 1,
+								"skewX": 0,
+								"skewY": 0,
+								"tag": -1,
+								"groupIndex": 0,
+								"colliders": []
+							},
+							"spriteFrameName": "image/default_panel.png",
+							"spriteType": "Sliced",
+							"srcBlend": 770,
+							"dstBlend": 771,
+							"trimEnabled": true,
+							"sizeMode": "Custom"
+						},
+						"object_type": "Sprite",
+						"children": [
+							{
+								"object": {
+									"node": {
+										"contentSize": {
+											"w": 51,
+											"h": 109
+										},
+										"enabled": true,
+										"name": "CharacterSprite",
+										"anchorPoint": {
+											"x": 0.5,
+											"y": 0.5
+										},
+										"cascadeOpacityEnabled": true,
+										"color": {
+											"r": 255,
+											"g": 255,
+											"b": 255
+										},
+										"globalZOrder": 0,
+										"localZOrder": 0,
+										"opacity": 255,
+										"opacityModifyRGB": false,
+										"position": {
+											"x": 0,
+											"y": 0
+										},
+										"rotationSkewX": 0,
+										"rotationSkewY": 0,
+										"scaleX": 1,
+										"scaleY": 1,
+										"skewX": 0,
+										"skewY": 0,
+										"tag": -1,
+										"groupIndex": 0,
+										"colliders": []
+									},
+									"spriteFrameName": "Common/grossini.png",
+									"spriteType": "Simple",
+									"srcBlend": 770,
+									"dstBlend": 771,
+									"trimEnabled": true,
+									"sizeMode": "Trimmed"
+								},
+								"object_type": "Sprite",
+								"children": []
+							}
+						]
+					}
+				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 200,
+							"h": 50
+						},
+						"enabled": true,
+						"name": "CreateLayerButton",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"cascadeOpacityEnabled": true,
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"globalZOrder": 0,
+						"localZOrder": 0,
+						"opacity": 255,
+						"opacityModifyRGB": false,
+						"position": {
+							"x": 482,
+							"y": 147
 						},
 						"rotationSkewX": 0,
 						"rotationSkewY": 0,
@@ -163,11 +395,11 @@
 						"object": {
 							"node": {
 								"contentSize": {
-									"w": 114,
+									"w": 190,
 									"h": 20
 								},
 								"enabled": true,
-								"name": "ChangeSceneLabel",
+								"name": "CreateLayerLabel",
 								"anchorPoint": {
 									"x": 0.5,
 									"y": 0.5
@@ -197,7 +429,7 @@
 								"colliders": []
 							},
 							"fontSize": 20,
-							"labelText": "CHANGE SCENE",
+							"labelText": "CREATE CUSTOM LAYER",
 							"horizontalAlignment": "Center",
 							"verticalAlignment": "Center",
 							"overflowType": "None",
@@ -208,142 +440,6 @@
 						},
 						"object_type": "Label",
 						"children": []
-					}
-				]
-			},
-			{
-				"object": {
-					"contentSize": {
-						"w": 480,
-						"h": 320
-					},
-					"enabled": true,
-					"name": "Layer_CustomLayer_TopLayer",
-					"anchorPoint": {
-						"x": 0.5,
-						"y": 0.5
-					},
-					"cascadeOpacityEnabled": true,
-					"color": {
-						"r": 255,
-						"g": 255,
-						"b": 255
-					},
-					"globalZOrder": 0,
-					"localZOrder": 0,
-					"opacity": 255,
-					"opacityModifyRGB": false,
-					"position": {
-						"x": 480,
-						"y": 464
-					},
-					"rotationSkewX": 0,
-					"rotationSkewY": 0,
-					"scaleX": 1,
-					"scaleY": 1,
-					"skewX": 0,
-					"skewY": 0,
-					"tag": -1,
-					"groupIndex": 0,
-					"colliders": []
-				},
-				"object_type": "Node",
-				"children": [
-					{
-						"object": {
-							"node": {
-								"contentSize": {
-									"w": 140,
-									"h": 50
-								},
-								"enabled": true,
-								"name": "SecondButton",
-								"anchorPoint": {
-									"x": 0.5,
-									"y": 0.5
-								},
-								"cascadeOpacityEnabled": true,
-								"color": {
-									"r": 255,
-									"g": 255,
-									"b": 255
-								},
-								"globalZOrder": 0,
-								"localZOrder": 0,
-								"opacity": 255,
-								"opacityModifyRGB": false,
-								"position": {
-									"x": 0,
-									"y": 18
-								},
-								"rotationSkewX": 0,
-								"rotationSkewY": 0,
-								"scaleX": 1,
-								"scaleY": 1,
-								"skewX": 0,
-								"skewY": 0,
-								"tag": -1,
-								"groupIndex": 0,
-								"colliders": []
-							},
-							"ignoreContentAdaptWithSize": false,
-							"spriteFrameName": "Common/Button_GreenSmall.png",
-							"transition": 2,
-							"pressedSpriteFrameName": "Common/Button_GreySmall.png"
-						},
-						"object_type": "Button",
-						"children": [
-							{
-								"object": {
-									"node": {
-										"contentSize": {
-											"w": 60,
-											"h": 20
-										},
-										"enabled": true,
-										"name": "SecondLabel",
-										"anchorPoint": {
-											"x": 0.5,
-											"y": 0.5
-										},
-										"cascadeOpacityEnabled": true,
-										"color": {
-											"r": 0,
-											"g": 0,
-											"b": 0
-										},
-										"globalZOrder": 0,
-										"localZOrder": 0,
-										"opacity": 255,
-										"opacityModifyRGB": false,
-										"position": {
-											"x": 0,
-											"y": 0
-										},
-										"rotationSkewX": 0,
-										"rotationSkewY": 0,
-										"scaleX": 1,
-										"scaleY": 1,
-										"skewX": 0,
-										"skewY": 0,
-										"tag": -1,
-										"groupIndex": 0,
-										"colliders": []
-									},
-									"fontSize": 20,
-									"labelText": "SECOND",
-									"horizontalAlignment": "Center",
-									"verticalAlignment": "Center",
-									"overflowType": "None",
-									"enableWrap": true,
-									"fontName": "creator/5fd4c05a-b83f-4d52-9f46-0ac57c930515/Marker Felt.ttf",
-									"fontType": "TTF",
-									"lineHeight": 20
-								},
-								"object_type": "Label",
-								"children": []
-							}
-						]
 					}
 				]
 			}
@@ -379,6 +475,56 @@
 				"y": 3,
 				"w": 12,
 				"h": 14
+			}
+		},
+		{
+			"name": "Texture/HelloWorld.png",
+			"texturePath": "creator/Texture/HelloWorld.png",
+			"rect": {
+				"x": 0,
+				"y": 0,
+				"w": 195,
+				"h": 270
+			},
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 195,
+				"h": 270
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 195,
+				"h": 270
+			}
+		},
+		{
+			"name": "Common/grossini.png",
+			"texturePath": "creator/Common/grossini.png",
+			"rect": {
+				"x": 17,
+				"y": 7,
+				"w": 51,
+				"h": 109
+			},
+			"offset": {
+				"x": 0,
+				"y": -1
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 85,
+				"h": 121
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 51,
+				"h": 109
 			}
 		},
 		{

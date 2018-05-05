@@ -13,14 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		294D0D641D0D56D500F7F5D4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 294D0D631D0D56D500F7F5D4 /* CoreText.framework */; };
-		2F98C7B4208F4993002C1D70 /* CocosView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B0208F4993002C1D70 /* CocosView.cpp */; };
-		2F98C7B5208F4993002C1D70 /* CocosView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B0208F4993002C1D70 /* CocosView.cpp */; };
-		2F98C7B6208F4993002C1D70 /* ICocosViewLifeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B3208F4993002C1D70 /* ICocosViewLifeCycle.cpp */; };
-		2F98C7B7208F4993002C1D70 /* ICocosViewLifeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B3208F4993002C1D70 /* ICocosViewLifeCycle.cpp */; };
 		2F98C7BA2091CAE6002C1D70 /* CocosObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */; };
 		2F98C7BB2091CAE6002C1D70 /* CocosObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */; };
-		2FBF0F8C2085252A00D7C2A7 /* SceneController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF0F8B2085252A00D7C2A7 /* SceneController.cpp */; };
-		2FBF0F8D2085252A00D7C2A7 /* SceneController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FBF0F8B2085252A00D7C2A7 /* SceneController.cpp */; };
 		2FCC5804208DC48F00CB547A /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC5803208DC48F00CB547A /* CustomLayer.cpp */; };
 		2FCC5805208DC48F00CB547A /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC5803208DC48F00CB547A /* CustomLayer.cpp */; };
 		2FEEA0F6207E1D80003981DE /* RichtextStringVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FEEA089207E1D80003981DE /* RichtextStringVisitor.cpp */; };
@@ -208,16 +202,9 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		294D0D631D0D56D500F7F5D4 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
-		2F98C7AF208F4993002C1D70 /* CocosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosView.h; sourceTree = "<group>"; };
-		2F98C7B0208F4993002C1D70 /* CocosView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosView.cpp; sourceTree = "<group>"; };
-		2F98C7B2208F4993002C1D70 /* ICocosViewLifeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICocosViewLifeCycle.h; sourceTree = "<group>"; };
-		2F98C7B3208F4993002C1D70 /* ICocosViewLifeCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ICocosViewLifeCycle.cpp; sourceTree = "<group>"; };
 		2F98C7B82091B74D002C1D70 /* CocosObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosObjectFactory.h; sourceTree = "<group>"; };
 		2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosObjectFactory.cpp; sourceTree = "<group>"; };
 		2FA4D2FB207F34790005B3AB /* CocosCustomMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosCustomMacros.h; sourceTree = "<group>"; };
-		2FBF0F7F2085251900D7C2A7 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
-		2FBF0F8A2085252A00D7C2A7 /* SceneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneController.h; sourceTree = "<group>"; };
-		2FBF0F8B2085252A00D7C2A7 /* SceneController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SceneController.cpp; sourceTree = "<group>"; };
 		2FCC5801208DC48E00CB547A /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
 		2FCC5803208DC48F00CB547A /* CustomLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomLayer.cpp; sourceTree = "<group>"; };
 		2FEEA089207E1D80003981DE /* RichtextStringVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RichtextStringVisitor.cpp; sourceTree = "<group>"; };
@@ -497,26 +484,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F98C7AE208F4992002C1D70 /* CocosViews */ = {
-			isa = PBXGroup;
-			children = (
-				2F98C7AF208F4993002C1D70 /* CocosView.h */,
-				2F98C7B0208F4993002C1D70 /* CocosView.cpp */,
-				2F98C7B2208F4993002C1D70 /* ICocosViewLifeCycle.h */,
-				2F98C7B3208F4993002C1D70 /* ICocosViewLifeCycle.cpp */,
-			);
-			path = CocosViews;
-			sourceTree = "<group>";
-		};
-		2FBF0F892085252A00D7C2A7 /* controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2FBF0F8A2085252A00D7C2A7 /* SceneController.h */,
-				2FBF0F8B2085252A00D7C2A7 /* SceneController.cpp */,
-			);
-			path = controllers;
-			sourceTree = "<group>";
-		};
 		2FEEA087207E1D80003981DE /* reader */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,9 +725,6 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2F98C7AE208F4992002C1D70 /* CocosViews */,
-				2FBF0F892085252A00D7C2A7 /* controllers */,
-				2FBF0F7F2085251900D7C2A7 /* Singleton.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* CustomScene.cpp */,
@@ -998,7 +962,6 @@
 				2FEEA0F6207E1D80003981DE /* RichtextStringVisitor.cpp in Sources */,
 				2FEEA13E207E1D80003981DE /* ColliderManager.cpp in Sources */,
 				2FEEA12A207E1D80003981DE /* EventObject.cpp in Sources */,
-				2F98C7B4208F4993002C1D70 /* CocosView.cpp in Sources */,
 				2FEEA100207E1D80003981DE /* DataParser.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				2FEEA10A207E1D80003981DE /* Armature.cpp in Sources */,
@@ -1016,8 +979,6 @@
 				2FEEA140207E1D80003981DE /* Collider.cpp in Sources */,
 				2FEEA11A207E1D80003981DE /* CCTextureData.cpp in Sources */,
 				2FEEA132207E1D80003981DE /* Bezier.cpp in Sources */,
-				2F98C7B6208F4993002C1D70 /* ICocosViewLifeCycle.cpp in Sources */,
-				2FBF0F8C2085252A00D7C2A7 /* SceneController.cpp in Sources */,
 				2FEEA128207E1D80003981DE /* ArmatureData.cpp in Sources */,
 				2FEEA118207E1D80003981DE /* CCSlot.cpp in Sources */,
 				2FEEA13C207E1D80003981DE /* Contract.cpp in Sources */,
@@ -1043,11 +1004,9 @@
 				2FEEA119207E1D80003981DE /* CCSlot.cpp in Sources */,
 				2FEEA125207E1D80003981DE /* FrameData.cpp in Sources */,
 				2FEEA13D207E1D80003981DE /* Contract.cpp in Sources */,
-				2FBF0F8D2085252A00D7C2A7 /* SceneController.cpp in Sources */,
 				2FEEA10B207E1D80003981DE /* Armature.cpp in Sources */,
 				2FEEA0FB207E1D80003981DE /* CreatorReader.cpp in Sources */,
 				2FCC5805208DC48F00CB547A /* CustomLayer.cpp in Sources */,
-				2F98C7B5208F4993002C1D70 /* CocosView.cpp in Sources */,
 				2FEEA101207E1D80003981DE /* DataParser.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				2FEEA10D207E1D80003981DE /* Slot.cpp in Sources */,
@@ -1055,7 +1014,6 @@
 				2FEEA127207E1D80003981DE /* AnimationData.cpp in Sources */,
 				2FEEA135207E1D80003981DE /* AnimationClip.cpp in Sources */,
 				2FEEA137207E1D80003981DE /* Easing.cpp in Sources */,
-				2F98C7B7208F4993002C1D70 /* ICocosViewLifeCycle.cpp in Sources */,
 				2FEEA0FF207E1D80003981DE /* JSONDataParser.cpp in Sources */,
 				2FEEA139207E1D80003981DE /* AnimateClip.cpp in Sources */,
 				2FEEA0F9207E1D80003981DE /* PageView.cpp in Sources */,

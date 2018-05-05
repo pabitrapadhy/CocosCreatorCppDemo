@@ -1,6 +1,5 @@
 #include "AppDelegate.h"
 #include "CustomScene.h"
-#include "CustomLayer.h"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -94,8 +93,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
+    // create scene
     CustomScene* scene = CustomScene::createFromCCreator();
-    scene->testUI();
+    // scene->loadMembers();
     director->runWithScene(scene);
     
     return true;

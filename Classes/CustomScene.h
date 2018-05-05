@@ -14,18 +14,17 @@ public:
 
     // member variables
     DECLARE_COCOS_UI(cocos2d::Node, backgroundLayer);
-    DECLARE_COCOS_UI(cocos2d::ui::Button, changeSceneBtn);
-    DECLARE_COCOS_UI(cocos2d::Label, changeSceneLabel);
-    DECLARE_COCOS_UI(CustomLayer, topLayer);
+    DECLARE_COCOS_UI(cocos2d::Sprite, helloWorldSprite);
+    DECLARE_COCOS_UI(CustomLayer, grossiniLayer);
+    DECLARE_COCOS_UI(cocos2d::ui::Button, createLayerButton);
     
     // member functions
     CustomScene();
 	static CustomScene* createFromCCreator();
 	virtual bool init() override;
+    void loadMembers();
     
-    void testUI();
-    void createStandaloneNode();
-    void test();
+    void createLayerNode();
     
     CREATE_FUNC(CustomScene);
 };

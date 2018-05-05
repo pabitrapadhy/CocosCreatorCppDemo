@@ -1,22 +1,27 @@
 #pragma once
+
+#include "cocos2d.h"
 #include "CocosView.h"
+#include "reader/CocosObjectFactory.h"
 
-DECLARE_COCOS_CUSTOM_VIEW(CustomLayer) {
-protected:
-    DECLARE_CUSTOM_VIEW_LIFECYCLE_ONATTACHONDETACH
-    DECLARE_CUSTOM_VIEW_LIFECYCLE_ONLOADONUNLOAD
-    DECLARE_CUSTOM_VIEW_LIFECYCLE_ONPOSTATTACH
-    DECLARE_CUSTOM_VIEW_LIFECYCLE_ONPREDETTACH
+using namespace cocos2d;
+using namespace cocos2d::ui;
 
+class CustomLayer : public cocos2d::ui::Widget, public CocosObject {
 public:
     DECLARE_TOUCH_CALLBACK;
 
-    int value;
     CustomLayer();
     static CustomLayer* createFromCCreator();
-    void test();
+    void loadMembers();
 
-    DECLARE_COCOS_UI(cocos2d::ui::Button, secondBtn);
+    // member variables
+    DECLARE_COCOS_UI(cocos2d::Label, layerInfoLabel);
+    DECLARE_COCOS_UI(cocos2d::Sprite, backgroundSprite);
+    DECLARE_COCOS_UI(cocos2d::Sprite, characterSprite);
+    
+    // member functions
+    void setInfoLabel(const std::string& info);
 
     CREATE_FUNC(CustomLayer);
 };

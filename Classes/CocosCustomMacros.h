@@ -3,7 +3,6 @@
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
 #include "ui/UIWidget.h"
-#include "CocosViews/ICocosViewLifeCycle.h"
 #include "CocosObjectFactory.h"
 #include "reader/CreatorReader.h"
 
@@ -11,7 +10,7 @@
 
 using namespace cocos2d;
 using namespace creator;
-using namespace ui;
+using namespace ui;  
 
 #pragma mark - Variable Declaration & Definition
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -126,6 +125,7 @@ using namespace ui;
         { \
             reader->setup(); \
             rootNode = static_cast<__classname__*>(reader->getSceneGraph()); \
+            rootNode->loadMembers(); \
         } \
         return rootNode; \
     } \
@@ -133,11 +133,6 @@ using namespace ui;
 
 #pragma mark - Layer Creation Logic
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
-#define DECLARE_COCOS_CUSTOM_VIEW(__classname__) \
-    using namespace cocos2d; \
-    using namespace cocos2d::ui; \
-    class __classname__ : public cocos2d::ui::Widget, public ICocosViewLifeCycle, public CocosObject
-
 #define CREATE_READER_FOR_NODE_CLASS(__classname__, __classreadername__, __filename__, __nodename__) \
     __classname__* __classname__::createFromCCreator() \
     { \
@@ -147,26 +142,10 @@ using namespace ui;
         { \
             reader->setup(); \
             rootNode = static_cast<__classname__*>(reader->getNodeGraph<__classname__>(__nodename__)); \
+            rootNode->loadMembers(); \
         } \
         return rootNode; \
     } \
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-#pragma mark - CocosView Lifecycle Events
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
-#define DECLARE_CUSTOM_VIEW_LIFECYCLE_ONATTACHONDETACH \
-    virtual void            attachToScene(); \
-    virtual void            detachFromScene(); \
-
-#define DECLARE_CUSTOM_VIEW_LIFECYCLE_ONLOADONUNLOAD \
-    virtual void            loadMembers(); \
-    virtual void            unloadMembers(); \
-
-#define DECLARE_CUSTOM_VIEW_LIFECYCLE_ONPOSTATTACH \
-    virtual void            postAttachToScene(); \
-
-#define DECLARE_CUSTOM_VIEW_LIFECYCLE_ONPREDETTACH \
-    virtual void            preDetachFromScene(); \
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #pragma mark - Object Factory (String To Class Type)
