@@ -333,7 +333,7 @@
 										"groupIndex": 0,
 										"colliders": []
 									},
-									"spriteFrameName": "Common/grossini.png",
+									"spriteFrameName": "Texture/grossini.png",
 									"spriteType": "Simple",
 									"srcBlend": 770,
 									"dstBlend": 771,
@@ -385,9 +385,9 @@
 						"colliders": []
 					},
 					"ignoreContentAdaptWithSize": false,
-					"spriteFrameName": "Common/Button_GreenSmall.png",
+					"spriteFrameName": "Texture/Button_GreenSmall.png",
 					"transition": 2,
-					"pressedSpriteFrameName": "Common/Button_GreySmall.png"
+					"pressedSpriteFrameName": "Texture/Button_GreySmall.png"
 				},
 				"object_type": "Button",
 				"children": [
@@ -503,8 +503,8 @@
 			}
 		},
 		{
-			"name": "Common/grossini.png",
-			"texturePath": "creator/Common/grossini.png",
+			"name": "Texture/grossini.png",
+			"texturePath": "creator/Texture/grossini.png",
 			"rect": {
 				"x": 17,
 				"y": 7,
@@ -528,8 +528,8 @@
 			}
 		},
 		{
-			"name": "Common/Button_GreenSmall.png",
-			"texturePath": "creator/Common/Button_GreenSmall.png",
+			"name": "Texture/Button_GreenSmall.png",
+			"texturePath": "creator/Texture/Button_GreenSmall.png",
 			"rect": {
 				"x": 0,
 				"y": 0,
@@ -553,8 +553,8 @@
 			}
 		},
 		{
-			"name": "Common/Button_GreySmall.png",
-			"texturePath": "creator/Common/Button_GreySmall.png",
+			"name": "Texture/Button_GreySmall.png",
+			"texturePath": "creator/Texture/Button_GreySmall.png",
 			"rect": {
 				"x": 0,
 				"y": 0,
