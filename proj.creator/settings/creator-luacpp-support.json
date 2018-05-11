@@ -1,7 +1,7 @@
 {
   "autoBuild": false,
   "exportResourceDynamicallyLoaded": false,
-  "exportResourceOnly": false,
+  "exportResourceOnly": true,
   "path": "/Users/ppadhy/Development/CocosCreatorCppDemo",
   "setup": false
 }

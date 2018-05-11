@@ -630,8 +630,22 @@ void CreatorReader::parseSprite(cocos2d::Sprite* sprite, const buffers::Sprite* 
     // order is important:
     // 1st: set sprite frame
     const auto& frameName = spriteBuffer->spriteFrameName();
-    if (frameName)
-        sprite->setSpriteFrame(frameName->str());
+    if (frameName) {
+        std::string spriteFrameName = frameName->c_str();
+        const ValueVector& splits = splitStringByDelimeter(spriteFrameName, '/');
+        std::string texName = splits.at(splits.size()-1).asString();
+        
+        // NOTE: searching textures from the Atlas(TexturePacker: .pvr.ccz & .plist).
+        // So, the required Atlas must be loaded before the scene/layer is loaded by CreatorReader.
+        // Else, it will look inside the creator directory.
+        // All textures used in the game must be taken from the Atlas as a practise to avoid any bugs.
+        auto spriteFrame = cocos2d::SpriteFrameCache::getInstance()->getSpriteFrameByName(texName.c_str());
+        if (spriteFrame) {
+            sprite->setSpriteFrame(spriteFrame);
+        } else {
+            sprite->setSpriteFrame(frameName->str());
+        }
+    }
 
     
     // 2nd: node properties

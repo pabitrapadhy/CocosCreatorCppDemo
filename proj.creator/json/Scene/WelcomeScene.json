@@ -442,6 +442,53 @@
 						"children": []
 					}
 				]
+			},
+			{
+				"object": {
+					"node": {
+						"contentSize": {
+							"w": 104,
+							"h": 101
+						},
+						"enabled": true,
+						"name": "icon",
+						"anchorPoint": {
+							"x": 0.5,
+							"y": 0.5
+						},
+						"cascadeOpacityEnabled": true,
+						"color": {
+							"r": 255,
+							"g": 255,
+							"b": 255
+						},
+						"globalZOrder": 0,
+						"localZOrder": 0,
+						"opacity": 255,
+						"opacityModifyRGB": false,
+						"position": {
+							"x": 479,
+							"y": 532
+						},
+						"rotationSkewX": 0,
+						"rotationSkewY": 0,
+						"scaleX": 1,
+						"scaleY": 1,
+						"skewX": 0,
+						"skewY": 0,
+						"tag": -1,
+						"groupIndex": 0,
+						"colliders": []
+					},
+					"spriteFrameName": "Texture/Common/quest_date_goldheart.png",
+					"spriteType": "Simple",
+					"srcBlend": 770,
+					"dstBlend": 771,
+					"trimEnabled": true,
+					"sizeMode": "Trimmed"
+				},
+				"object_type": "Sprite",
+				"children": []
 			}
 		]
 	},
@@ -575,6 +622,31 @@
 				"y": 11,
 				"w": 31,
 				"h": 31
+			}
+		},
+		{
+			"name": "Texture/Common/quest_date_goldheart.png",
+			"texturePath": "creator/Texture/Common/quest_date_goldheart.png",
+			"rect": {
+				"x": 2,
+				"y": 6,
+				"w": 104,
+				"h": 101
+			},
+			"offset": {
+				"x": 0,
+				"y": -0.5
+			},
+			"rotated": false,
+			"originalSize": {
+				"w": 108,
+				"h": 112
+			},
+			"centerRect": {
+				"x": 0,
+				"y": 0,
+				"w": 104,
+				"h": 101
 			}
 		}
 	],
