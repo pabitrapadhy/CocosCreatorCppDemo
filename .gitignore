@@ -85,3 +85,6 @@ assets/
 
 # random
 TODO
+
+#mac files
+*.DS_Store
