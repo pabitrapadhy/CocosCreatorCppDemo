@@ -1,7 +1,8 @@
 #pragma once
 
 #include "cocos2d.h"
-#include "CocosView.h"
+#include "ui/UIWidget.h"
+#include "CocosCustomMacros.h"
 #include "reader/CocosObjectFactory.h"
 
 using namespace cocos2d;
