@@ -430,15 +430,12 @@ cocos2d::Node* CreatorReader::createNode(const buffers::Node* nodeBuffer) const
     std::string nodename = name->c_str();
 
     const ValueVector& splits = splitStringByDelimeter(nodename, '_');
-    std::string typeStr = toLowerCase(splits.at(0).asString());
+    std::string typeStr = splits.at(0).asString();
     
     cocos2d::Node* node = nullptr;
     if (inspectForCustomClassFormat(typeStr) && splits.size() > 1) {
-        // getting the specific factory by passing string and creating object from it.
         std::string classname = splits.at(1).asString();
-        FACTORY_MAP factoryMap = CocosObject::getFactoryMap();
-        CocosObjectFactory* factory = static_cast<CocosObjectFactory*>(factoryMap[classname]);
-        node = reinterpret_cast<cocos2d::Node*>(factory->createFactoryNode());    
+        node = CocosObjectFactory::getInstance()->createObject(classname);
     } else {
         node = cocos2d::Node::create();
     }

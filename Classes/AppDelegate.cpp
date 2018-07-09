@@ -1,6 +1,8 @@
 #include "AppDelegate.h"
 #include "CustomScene.h"
 #include "Globals.h"
+#include "CocosCustomMacros.h"
+#include "CustomLayer.h"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -265,9 +267,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // Load SpriteFrames
     SpriteFrameCache::getInstance()->addSpriteFramesWithFile("Common.plist", "Common.pvr.ccz");
     
+    // Register CustomClass
+    REGISTER_CLASS_TO_FACTORY(CustomLayer)
+    
     // create scene
     CustomScene* scene = CustomScene::createFromCCreator();
-    // scene->loadMembers();
     director->runWithScene(scene);
     
     return true;

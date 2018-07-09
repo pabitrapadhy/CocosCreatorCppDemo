@@ -148,18 +148,8 @@ using namespace ui;
     } \
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-#pragma mark - Object Factory (String To Class Type)
+#pragma mark - Register Class With Factory
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
-#define REGISTER_OBJECT_FACTORY(__classname__) \
-    class __classname__##Factory : public CocosObjectFactory { \
-    public: \
-       __classname__##Factory() \
-       { \
-            __classname__::registerFactory(#__classname__, this); \
-       } \
-       virtual CocosObject* createFactoryNode() \
-       { \
-           return __classname__::create(); \
-       } \
-    }; \
-    static __classname__##Factory instance;
+#define REGISTER_CLASS_TO_FACTORY(__classname__) \
+    CocosObjectFactory::getInstance()->registerClass(#__classname__, __classname__::create);
+////////////////////////////////////////////////////////////////////////////////////////////////////////

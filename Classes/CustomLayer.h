@@ -3,12 +3,11 @@
 #include "cocos2d.h"
 #include "ui/UIWidget.h"
 #include "CocosCustomMacros.h"
-#include "reader/CocosObjectFactory.h"
 
 using namespace cocos2d;
 using namespace cocos2d::ui;
 
-class CustomLayer : public cocos2d::ui::Widget, public CocosObject {
+class CustomLayer : public cocos2d::ui::Widget {
 public:
     DECLARE_TOUCH_CALLBACK;
 

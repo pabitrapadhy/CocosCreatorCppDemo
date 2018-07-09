@@ -7,7 +7,6 @@
 DEFINE_CREATOR_READER_FOR_NODE_CLASS(CustomLayer, CustomLayerReader); // MANDATORY: only for layer/view classes
 CREATE_READER_FOR_NODE_CLASS(CustomLayer, CustomLayerReader, SCENE_NAME, LAYER_NAME); // MANDATORY: only for layer/view classes
 DEFINE_TOUCH_CALLBACK(CustomLayer); // for everything
-REGISTER_OBJECT_FACTORY(CustomLayer); // MANDATORY: only for layer/view classes
 
 CustomLayer::CustomLayer() {
     CCLOG("CustomLayer Constructor");

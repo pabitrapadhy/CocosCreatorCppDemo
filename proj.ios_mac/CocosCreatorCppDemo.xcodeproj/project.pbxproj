@@ -17,8 +17,6 @@
 		2F06081620A305660023562B /* Globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F06081220A305660023562B /* Globals.cpp */; };
 		2F06082120A58CCC0023562B /* Default-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F06082020A58CCC0023562B /* Default-812h@3x.png */; };
 		2F06082220A58CCC0023562B /* Default-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F06082020A58CCC0023562B /* Default-812h@3x.png */; };
-		2F98C7BA2091CAE6002C1D70 /* CocosObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */; };
-		2F98C7BB2091CAE6002C1D70 /* CocosObjectFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */; };
 		2FCC5804208DC48F00CB547A /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC5803208DC48F00CB547A /* CustomLayer.cpp */; };
 		2FCC5805208DC48F00CB547A /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC5803208DC48F00CB547A /* CustomLayer.cpp */; };
 		2FEEA0F6207E1D80003981DE /* RichtextStringVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FEEA089207E1D80003981DE /* RichtextStringVisitor.cpp */; };
@@ -202,7 +200,6 @@
 		2F06081420A305660023562B /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
 		2F06082020A58CCC0023562B /* Default-812h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-812h@3x.png"; sourceTree = "<group>"; };
 		2F98C7B82091B74D002C1D70 /* CocosObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosObjectFactory.h; sourceTree = "<group>"; };
-		2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CocosObjectFactory.cpp; sourceTree = "<group>"; };
 		2FA4D2FB207F34790005B3AB /* CocosCustomMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosCustomMacros.h; sourceTree = "<group>"; };
 		2FCC5801208DC48E00CB547A /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
 		2FCC5803208DC48F00CB547A /* CustomLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomLayer.cpp; sourceTree = "<group>"; };
@@ -490,7 +487,6 @@
 				2FEEA0D5207E1D80003981DE /* CreatorReader_generated.h */,
 				2FEEA0D6207E1D80003981DE /* CreatorReader.h */,
 				2F98C7B82091B74D002C1D70 /* CocosObjectFactory.h */,
-				2F98C7B92091CAE6002C1D70 /* CocosObjectFactory.cpp */,
 				2FEEA0D7207E1D80003981DE /* animation */,
 				2FEEA0E3207E1D80003981DE /* collider */,
 				2FEEA0EC207E1D80003981DE /* Macros.h */,
@@ -941,7 +937,6 @@
 				2FEEA106207E1D80003981DE /* BaseObject.cpp in Sources */,
 				2FEEA112207E1D80003981DE /* Animation.cpp in Sources */,
 				2FEEA11E207E1D80003981DE /* BaseFactory.cpp in Sources */,
-				2F98C7BA2091CAE6002C1D70 /* CocosObjectFactory.cpp in Sources */,
 				2FEEA136207E1D80003981DE /* Easing.cpp in Sources */,
 				2FCC5804208DC48F00CB547A /* CustomLayer.cpp in Sources */,
 				2FEEA130207E1D80003981DE /* AnimationManager.cpp in Sources */,
@@ -995,7 +990,6 @@
 				2FEEA121207E1D80003981DE /* DragonBonesData.cpp in Sources */,
 				2F06081620A305660023562B /* Globals.cpp in Sources */,
 				2FEEA13B207E1D80003981DE /* Intersection.cpp in Sources */,
-				2F98C7BB2091CAE6002C1D70 /* CocosObjectFactory.cpp in Sources */,
 				2FEEA119207E1D80003981DE /* CCSlot.cpp in Sources */,
 				2FEEA125207E1D80003981DE /* FrameData.cpp in Sources */,
 				2FEEA13D207E1D80003981DE /* Contract.cpp in Sources */,

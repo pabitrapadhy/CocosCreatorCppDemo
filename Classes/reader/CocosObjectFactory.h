@@ -1,21 +1,33 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 #include <map>
-
-class CocosObjectFactory;
-
-typedef std::map<std::string, CocosObjectFactory*> FACTORY_MAP;
-class CocosObject {
-private:
-    static FACTORY_MAP factories;
-
-public:
-    static void registerFactory(const std::string& classname_str, CocosObjectFactory *factory);
-    static FACTORY_MAP& getFactoryMap();
-};
+#include <functional>
 
 class CocosObjectFactory {
+private:
+    std::map<std::string, std::function<void* ()>> registry;
+    
 public:
-	virtual CocosObject* createFactoryNode() = 0;
+    static CocosObjectFactory* getInstance() {
+        static CocosObjectFactory instance;
+        return &instance;
+    }
+    
+    // register class
+    void registerClass(const std::string& id, std::function<void* ()> functr) {
+        if (registry.find(id) == registry.end()) {
+            registry[id] = functr;
+        }
+    }
+    
+    // create object
+    cocos2d::Node* createObject(std::string id) {
+        if (registry.find(id) != registry.end()) {
+            auto& functr = registry[id];
+            return static_cast<cocos2d::Node*>(functr());
+        }
+        return nullptr;
+    }
 };
