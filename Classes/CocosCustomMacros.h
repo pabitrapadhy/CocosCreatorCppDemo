@@ -155,12 +155,11 @@ using namespace ui;
     public: \
        __classname__##Factory() \
        { \
-            CocosObject::registerFactory(#__classname__, this); \
+            __classname__::registerFactory(#__classname__, this); \
        } \
        virtual CocosObject* createFactoryNode() \
        { \
-           __classname__* ref = __classname__::create(); \
-           return static_cast<CocosObject*>(ref); \
+           return __classname__::create(); \
        } \
     }; \
     static __classname__##Factory instance;

@@ -12,7 +12,7 @@ private:
 
 public:
     static void registerFactory(const std::string& classname_str, CocosObjectFactory *factory);
-    static FACTORY_MAP getFactoryMap();
+    static FACTORY_MAP& getFactoryMap();
 };
 
 class CocosObjectFactory {

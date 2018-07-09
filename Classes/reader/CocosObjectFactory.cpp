@@ -6,6 +6,6 @@ void CocosObject::registerFactory(const std::string& classname_str, CocosObjectF
     CocosObject::factories[classname_str] = factory;
 }
 
-FACTORY_MAP CocosObject::getFactoryMap() { 
+FACTORY_MAP& CocosObject::getFactoryMap() {
 	return CocosObject::factories;
 }
