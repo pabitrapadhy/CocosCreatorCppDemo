@@ -85,6 +85,9 @@ public:
             }
         }
 
+        // fixing the position differene to design resolution
+        searchNode->setPosition(searchNode->getPosition() + _positionDiffDesignResolution);
+        
         _animationManager->playOnLoad();
 
         searchNode->addChild(_collisionManager);
