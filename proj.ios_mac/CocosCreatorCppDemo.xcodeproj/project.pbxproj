@@ -19,6 +19,8 @@
 		2F06082220A58CCC0023562B /* Default-812h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F06082020A58CCC0023562B /* Default-812h@3x.png */; };
 		2FCC5804208DC48F00CB547A /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC5803208DC48F00CB547A /* CustomLayer.cpp */; };
 		2FCC5805208DC48F00CB547A /* CustomLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FCC5803208DC48F00CB547A /* CustomLayer.cpp */; };
+		2FDC4F69210875F60082B143 /* PageViewItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC4F67210875F60082B143 /* PageViewItem.cpp */; };
+		2FDC4F6A210875F60082B143 /* PageViewItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC4F67210875F60082B143 /* PageViewItem.cpp */; };
 		2FEEA0F6207E1D80003981DE /* RichtextStringVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FEEA089207E1D80003981DE /* RichtextStringVisitor.cpp */; };
 		2FEEA0F7207E1D80003981DE /* RichtextStringVisitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FEEA089207E1D80003981DE /* RichtextStringVisitor.cpp */; };
 		2FEEA0F8207E1D80003981DE /* PageView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2FEEA08A207E1D80003981DE /* PageView.cpp */; };
@@ -203,6 +205,8 @@
 		2FA4D2FB207F34790005B3AB /* CocosCustomMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosCustomMacros.h; sourceTree = "<group>"; };
 		2FCC5801208DC48E00CB547A /* CustomLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomLayer.h; sourceTree = "<group>"; };
 		2FCC5803208DC48F00CB547A /* CustomLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomLayer.cpp; sourceTree = "<group>"; };
+		2FDC4F67210875F60082B143 /* PageViewItem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PageViewItem.cpp; sourceTree = "<group>"; };
+		2FDC4F68210875F60082B143 /* PageViewItem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PageViewItem.hpp; sourceTree = "<group>"; };
 		2FEEA089207E1D80003981DE /* RichtextStringVisitor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RichtextStringVisitor.cpp; sourceTree = "<group>"; };
 		2FEEA08A207E1D80003981DE /* PageView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PageView.cpp; sourceTree = "<group>"; };
 		2FEEA08B207E1D80003981DE /* RichtextStringVisitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RichtextStringVisitor.h; sourceTree = "<group>"; };
@@ -722,6 +726,8 @@
 				2FCC5803208DC48F00CB547A /* CustomLayer.cpp */,
 				2FCC5801208DC48E00CB547A /* CustomLayer.h */,
 				2FEEA087207E1D80003981DE /* reader */,
+				2FDC4F67210875F60082B143 /* PageViewItem.cpp */,
+				2FDC4F68210875F60082B143 /* PageViewItem.hpp */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -968,6 +974,7 @@
 				2FEEA140207E1D80003981DE /* Collider.cpp in Sources */,
 				2FEEA11A207E1D80003981DE /* CCTextureData.cpp in Sources */,
 				2FEEA132207E1D80003981DE /* Bezier.cpp in Sources */,
+				2FDC4F69210875F60082B143 /* PageViewItem.cpp in Sources */,
 				2FEEA128207E1D80003981DE /* ArmatureData.cpp in Sources */,
 				2FEEA118207E1D80003981DE /* CCSlot.cpp in Sources */,
 				2FEEA13C207E1D80003981DE /* Contract.cpp in Sources */,
@@ -1004,6 +1011,7 @@
 				2FEEA135207E1D80003981DE /* AnimationClip.cpp in Sources */,
 				2FEEA137207E1D80003981DE /* Easing.cpp in Sources */,
 				2FEEA0FF207E1D80003981DE /* JSONDataParser.cpp in Sources */,
+				2FDC4F6A210875F60082B143 /* PageViewItem.cpp in Sources */,
 				2FEEA139207E1D80003981DE /* AnimateClip.cpp in Sources */,
 				2FEEA0F9207E1D80003981DE /* PageView.cpp in Sources */,
 				2FEEA117207E1D80003981DE /* CCArmatureDisplay.cpp in Sources */,

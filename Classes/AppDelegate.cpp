@@ -3,6 +3,7 @@
 #include "Globals.h"
 #include "CocosCustomMacros.h"
 #include "CustomLayer.h"
+#include "PageViewItem.hpp"
 
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
@@ -269,6 +270,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     // Register CustomClass
     REGISTER_CLASS_TO_FACTORY(CustomLayer)
+    REGISTER_CLASS_TO_FACTORY(PageViewItem)
     
     // create scene
     CustomScene* scene = CustomScene::createFromCCreator();

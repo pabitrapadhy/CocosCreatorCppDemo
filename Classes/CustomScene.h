@@ -18,6 +18,8 @@ public:
     DECLARE_COCOS_UI(CustomLayer, grossiniLayer);
     DECLARE_COCOS_UI(cocos2d::ui::Button, createLayerButton);
     
+    DECLARE_COCOS_UI(cocos2d::ui::PageView, pageView);
+    
     // member functions
     CustomScene();
 	static CustomScene* createFromCCreator();

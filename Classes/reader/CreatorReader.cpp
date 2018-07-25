@@ -844,6 +844,7 @@ cocos2d::ui::ScrollView* CreatorReader::createScrollView(const buffers::ScrollVi
 {
     auto scrollView = ui::ScrollView::create();
     parseScrollView(scrollView, scrollViewBuffer);
+    scrollView->setClippingType(cocos2d::ui::Layout::ClippingType::SCISSOR);
     return scrollView;
 }
 
@@ -1235,6 +1236,12 @@ void CreatorReader::parsePageView(cocos2d::ui::PageView* pageview, const buffers
     const auto& pages = pageViewBuffer->pages();
     for (const auto& page : *pages)
     {
+        // NOTE: It is hardbound to create pages in PageView with a sprite component
+        // So, in this block of code they could create an Widget object, assign the sprite's texture.
+        // But, we are not doing it that way.
+        // We create pageview item as layers, then add them dynimically.
+        return; // forcefully returning, not to create pages from creator.
+
         auto imageView = cocos2d::ui::ImageView::create();
         
         const auto& spriteFrame = page->spriteFrame();

@@ -1,5 +1,4 @@
-#ifndef __cricketgold__Globals__
-#define __cricketgold__Globals__
+#pragma once
 
 #include <iostream>
 #include "cocos2d.h"
@@ -47,4 +46,3 @@ public:
     static DevicePlatform getDevicePlatform();
     static DeviceType getDeviceType();
 };
-#endif
